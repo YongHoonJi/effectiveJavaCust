@@ -12,7 +12,7 @@ public class ContraVarianceTest {
 		});
 	}
 	
-	// Dog의 상위 타입이면 어떤 것이든 - write only - Dog인 것을 보장 - 역변 
+	// Dog의 상위 타입이면 어떤 것이든 - down casting - write only - Dog인 것을 보장 - 역변 
 	public static void test_contravariacne(List<? super Dog> list){
 		// 어떤타입의 상위 클래스가 될지 모름.
 		Object obj = list.get(0);
