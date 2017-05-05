@@ -1,4 +1,4 @@
-package org.effectivejava.examples;
+package variance;
 
 import java.util.ArrayList;
 import java.util.Arrays;
