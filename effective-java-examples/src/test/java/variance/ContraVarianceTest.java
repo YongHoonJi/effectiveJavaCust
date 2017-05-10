@@ -23,10 +23,18 @@ public class ContraVarianceTest {
 		List<Animal> alist = new ArrayList<Animal>();
 		alist.add(new Cat());
 		alist.add(new Wolf());
+		
 		System.out.println("[Co-variance]");
 		test_covariance(alist);
+		
+		List<Cat> catList = new ArrayList<Cat>();
+		test_covariance(catList);
+		
 		System.out.println("[Cotra-variance]");
 		test_contravariacne(alist);
-		alist.stream().forEach(s -> s.breathe());
+		
+		List<Dog> dogList = new ArrayList<Dog>();
+		test_contravariacne(dogList);
+		
 	}
 }
