@@ -1,4 +1,4 @@
-package com.mobile.optional.with.self;
+package test.optional.with.self;
 
 public final class Money {
 	private int paper;

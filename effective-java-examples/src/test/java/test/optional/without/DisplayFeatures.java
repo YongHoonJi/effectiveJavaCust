@@ -1,4 +1,4 @@
-package com.mobile.optional.without;
+package test.optional.without;
 
 public class DisplayFeatures {
 	private String size;

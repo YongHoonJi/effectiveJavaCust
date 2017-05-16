@@ -1,8 +1,8 @@
-package com.mobile.optional.with;
+package test.optional.with;
 
 import java.util.Optional;
 
-import com.mobile.optional.without.ScreenResolution;
+import test.optional.without.ScreenResolution;
 
 public class MobileService {
 	public Integer getMobileScreenWidth(Optional<Mobile> mobile) {

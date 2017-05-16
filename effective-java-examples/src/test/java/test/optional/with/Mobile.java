@@ -1,12 +1,14 @@
-package com.mobile.optional.without;
+package test.optional.with;
+
+import java.util.Optional;
 
 public class Mobile {
 	private long id;
 	private String brand;
 	private String name;
-	private DisplayFeatures displayFeatures;
+	private Optional<DisplayFeatures> displayFeatures;
 
-	public Mobile(long id, String brand, String name, DisplayFeatures displayFeatures) {
+	public Mobile(long id, String brand, String name, Optional<DisplayFeatures> displayFeatures) {
 		this.id = id;
 		this.brand = brand;
 		this.name = name;
@@ -25,7 +27,7 @@ public class Mobile {
 		return name;
 	}
 
-	public DisplayFeatures getDisplayFeatures() {
+	public Optional<DisplayFeatures> getDisplayFeatures() {
 		return displayFeatures;
 	}
 }

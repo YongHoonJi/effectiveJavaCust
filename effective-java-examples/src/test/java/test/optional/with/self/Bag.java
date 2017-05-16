@@ -1,4 +1,4 @@
-package com.mobile.optional.with.self;
+package test.optional.with.self;
 
 import java.util.Optional;
 
