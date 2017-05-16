@@ -25,7 +25,6 @@ public class EitherTest {
 
 	}
 	
-	
 	static Either<Exception, Integer> toInteger(String val){
 		try {
 			return Either.right(new Integer(Integer.parseInt(val)));
