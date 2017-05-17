@@ -26,7 +26,6 @@ public class EitherTest {
 			List<Integer> refined = nums.stream().map( s -> toInteger(s))
 					.filter( e -> (e.left() == null)).collect(Collectors.toList())
 					.stream().map( a -> a.right()).collect(Collectors.toList());
-					;
 			
 			System.out.println("refined list");
 			refined.stream().forEach(i -> System.out.println(i));

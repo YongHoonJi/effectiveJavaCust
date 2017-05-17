@@ -15,6 +15,6 @@ public class MobileService {
 		System.out.println("Screenresolution:"+s);
 		
 		System.out.println("width:"+s.map(ScreenResolution::getWidth).orElse(0));
-		return s.map(ScreenResolution::getWidth).orElse(0);
+		return mobile.flatMap(Mobile::getDisplayFeatures).flatMap(DisplayFeatures::getResolution).map(ScreenResolution::getWidth).orElse(0);
 	}
 }
