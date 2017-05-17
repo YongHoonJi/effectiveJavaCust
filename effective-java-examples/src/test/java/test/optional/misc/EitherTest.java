@@ -1,11 +1,13 @@
 package test.optional.misc;
 
+import java.util.Arrays;
+import java.util.List;
+import java.util.stream.Collectors;
+
 import org.junit.Test;
 
 import com.google.common.base.Optional;
 import com.google.common.base.Throwables;
-
-import test.optional.misc.Either;
 
 public class EitherTest {
 	@Test
@@ -19,6 +21,15 @@ public class EitherTest {
 			Either<Exception, Integer> f = toInteger("abc");
 			System.out.println("f right:"+Optional.fromNullable(f.right()));
 			System.out.println("f left:"+f.left().getMessage());
+			
+			List<String> nums = Arrays.asList("1", "2", "_");
+			List<Integer> refined = nums.stream().map( s -> toInteger(s))
+					.filter( e -> (e.left() == null)).collect(Collectors.toList())
+					.stream().map( a -> a.right()).collect(Collectors.toList());
+					;
+			
+			System.out.println("refined list");
+			refined.stream().forEach(i -> System.out.println(i));
 		} catch (Exception e) {
 			e.printStackTrace();
 		}

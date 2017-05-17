@@ -18,6 +18,12 @@ public class NoOptionalTest {
 		
 		assertEquals(10, f3("10").get("suc"));
 		assertEquals("exception", ((Exception)f3("_").get("fail")).getMessage());
+		
+		try {
+			System.out.println(f4("_"));
+		} catch (Exception e) {
+			System.out.println("exception::"+e.getMessage());
+		}
 	}
 	
 	// 지정값 혹은 null을 리턴할 경우
@@ -49,5 +55,14 @@ public class NoOptionalTest {
 			m.put("fail", new Exception("exception"));
 		}
 		return m;
+	}
+	
+	// exception방식
+	private int f4(String s) throws Exception{
+		try {
+			return Integer.parseInt(s);
+		} catch (Exception e) {
+			throw new Exception("exception");
+		}
 	}
 }
